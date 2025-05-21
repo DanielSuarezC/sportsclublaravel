@@ -16,7 +16,9 @@
     </ul>
 </div>
 
-<a href="{{ url()->previous() }}" class="inline-block mt-6 px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
-    Volver
-</a>
+<div class="mt-6">
+        <a href="{{ route('clubs.index') }}" class="inline-block px-5 py-2 bg-blue-600 text-gray-800 rounded-md hover:bg-blue-700">
+            ← Volver 
+        </a>
+</div>
 @endsection

@@ -64,6 +64,8 @@ public function club()
         return $this->belongsToMany(Event::class, 'enrollments');
     }
 
+    
+
     public function hasRole($role)
     {
         return $this->roles()->where('name', $role)->exists();

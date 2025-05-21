@@ -18,26 +18,22 @@
 
             @auth
                 <ul class="space-x-10 items-center list-none">
-                    <li>
-                        <a href="{{ route('dashboard') }}" class="text-sm text-gray-700 hover:underline">
-                            Panel
-                        </a>
-                    </li>
-                    <li>
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-                            <button type="submit" class="text-sm text-gray-700 hover:underline bg-transparent border-none p-0 m-0 cursor-pointer">
-                                Cerrar sesión
-                            </button>
-                        </form>
-                    </li>
+                    <a href="{{ route('dashboard') }}" class="text-sm text-gray-700 hover:underline">
+                        Panel
+                    </a>
+                    <form method="POST" action="{{ route('logout') }}" class="inline">
+                        @csrf
+                        <button type="submit" class="text-sm text-gray-700 hover:underline bg-transparent border-none p-0 m-0 cursor-pointer">
+                            Cerrar sesión
+                        </button>
+                    </form>
                 </ul>
             @else
-                <div class="space-x-28 items-center ">                  
-                    <a  href="{{ route('login') }}" class="text-sm text-gray-700 hover:underline ">Iniciar sesión</a>
+                <div>                  
+                    <a href="{{ route('login') }}" class="text-sm text-gray-700 hover:underline m-2">Iniciar sesión</a>
                     <a href="{{ route('users.create') }}"
                         class="text-sm text-gray-700 hover:underline">
-                        Registrar nuevo usuario
+                        Crear cuenta
                     </a>
                 </div>
             @endauth

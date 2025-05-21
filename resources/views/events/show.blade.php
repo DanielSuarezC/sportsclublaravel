@@ -38,9 +38,11 @@
             <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">
                 Inscribirme
             </button>
-            <a href="{{ route('events.index') }}" class="inline-block mt-6 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-                Volver
-            </a>
+            <div class="mt-6">
+                <a href="{{ route('events.index') }}" class="inline-block px-5 py-2 bg-blue-600 text-gray-800 rounded-md hover:bg-blue-700">
+                    ← Volver 
+                </a>
+            </div>
         </form>
     @endauth
 </div>
