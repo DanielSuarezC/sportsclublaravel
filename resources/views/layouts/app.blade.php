@@ -8,10 +8,12 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="{{ asset('js/app.js') }}"></script>
 
-      
+     <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
 </head>
 
-<body class="bg-gray-100 text-gray-900">
+<body class=" text-gray-900"  style='background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("assets/background3.jpg");'>
     <header class="bg-white shadow">
         <nav class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-bold text-indigo-600">Sports Club Manager</h1>
@@ -43,6 +45,9 @@
     <main class="py-6 px-4 max-w-7xl mx-auto">
         @yield('content')
     </main>
+    <!-- Bootstrap JS Bundle (incluye Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
