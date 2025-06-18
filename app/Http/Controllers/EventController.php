@@ -11,7 +11,8 @@ class EventController extends Controller
 {
     public function index()
     {
-        $events = Event::with('club')->where('visibility', 'publico')->get();
+        $events = Event::all();
+        // $events_public = Event::with('club')->where('visibility', 'publico')->get();
         return view('events.index', compact('events'));
     }
 

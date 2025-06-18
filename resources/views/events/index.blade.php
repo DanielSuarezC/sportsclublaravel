@@ -4,7 +4,7 @@
 <h2 class="text-2xl font-bold mb-4">Eventos</h2>
 @if (Auth::user()->hasRole('administrador'))
 
-<a href="{{ route('events.create') }}" class="mb-4 inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Crear evento</a>
+ <a href="{{ route('events.create') }}" class="mb-4 inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Crear evento</a>
 @endif
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     @foreach($events as $event)
@@ -14,6 +14,8 @@
             <p class="mt-2 text-gray-700 text-sm">{{ $event->description }}</p>
             <a href="{{ route('events.show', $event) }}" class="mt-2 text-indigo-500 hover:underline">Ver detalles</a>
         </div>
+
+
     @endforeach
 </div>
 <div class="mt-6">
