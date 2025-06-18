@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClubController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MemberController;
 
@@ -18,11 +19,7 @@ use App\Http\Controllers\MemberController;
 |
 */
 
-Route::get('/', function () {
-    $clubs = \App\Models\Club::all();
-    $events = \App\Models\Event::where('visibility', 'publico')->get();
-    return view('welcome', compact('clubs', 'events'));
-});
+Route::get('/', [HomeController::class, 'index']);
 
 // Autenticación (si estás usando Breeze o Fortify)
 require __DIR__.'/auth.php';
