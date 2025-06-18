@@ -24,11 +24,5 @@ ENV APP_DEBUG=false
 
 EXPOSE 10000
 
-# Generar clave, caches
-RUN php artisan key:generate && \
-    php artisan config:cache && \
-    php artisan route:cache && \
-    php artisan view:cache
-
-# Ejecutar migraciones y levantar servidor
-CMD ["sh", "-c", "php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=10000"]
+# Comando de inicio: genera cachés, aplica migraciones y levanta el servidor
+CMD ["sh", "-c", "php artisan config:cache && php artisan route:cache && php artisan view:cache && php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=10000"]
